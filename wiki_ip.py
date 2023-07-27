@@ -13,6 +13,8 @@ def ip2location(title):
             if links not in dicIP:
                 ip = finder(links.get_text())
                 dicIP[links.get_text()] = ip
+    if len(dicIP) <=0:
+        return 'Nothing found!'
     return dicIP
 
 
@@ -26,6 +28,4 @@ def finder(ip):
     return dic
 
 
-print(ip2location('Sony'))
-
-print('ok')
+print(ip2location('Minato,_Tokyo'))
